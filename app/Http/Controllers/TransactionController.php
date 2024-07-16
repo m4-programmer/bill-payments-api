@@ -32,7 +32,6 @@ class TransactionController extends Controller
     public function update(Request $request, $id)
     {
         $data = $request->validate([
-            'user_id' => 'required|exists:users,id',
             'description' => 'nullable',
             'amount' => 'required',
         ]);
